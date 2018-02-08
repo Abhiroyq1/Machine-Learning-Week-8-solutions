@@ -24,7 +24,9 @@ k1 = zeros(size(centroids));
 
 for i=1:length(X),
     k1 = (X(i,:) - centroids).^2;
-    [c,ix] = min(sum(k1,2));
+    [c,ix] = min(sum(k1,2));     %minimum of the summation of each training 
+                                 %example gives the value & index of the....
+                                 %point closest to the centroid.
     idx(i) = ix;
 end;
 
